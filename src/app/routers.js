@@ -1,9 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
+import RootLayout from "../featured/layout";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <h1>Hello</h1>
+        element: <RootLayout/>,
+        children: [
+            {
+                path: '/auth'
+            },
+            {
+                path: '/dashboard'
+            }
+        ]
     }
 ])
 
